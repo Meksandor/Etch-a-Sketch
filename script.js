@@ -39,8 +39,15 @@ var button64 = document.getElementById("ratio64");
 var button81 = document.getElementById("ratio81");
 var button100 = document.getElementById("ratio100");
 
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
 
 button16.addEventListener("click", function () {
+    removeAllChildNodes(divsContainer);
+
     for (var i = 0; i < 16; i++) {
         var div = document.createElement("div");
         div.id = "Div " + (i + 1);
@@ -52,6 +59,8 @@ button16.addEventListener("click", function () {
     });
 });
 button25.addEventListener("click", function () {
+    removeAllChildNodes(divsContainer);
+
     for (var i = 0; i < 25; i++) {
         var div = document.createElement("div");
         div.id = "Div " + (i + 1);
@@ -63,6 +72,8 @@ button25.addEventListener("click", function () {
     });
 });
 button36.addEventListener("click", function () {
+    removeAllChildNodes(divsContainer);
+
     for (var i = 0; i < 36; i++) {
         var div = document.createElement("div");
         div.id = "Div " + (i + 1);
@@ -74,6 +85,8 @@ button36.addEventListener("click", function () {
     });
 });
 button49.addEventListener("click", function () {
+    removeAllChildNodes(divsContainer);
+
     for (var i = 0; i < 49; i++) {
         var div = document.createElement("div");
         div.id = "Div " + (i + 1);
@@ -85,6 +98,8 @@ button49.addEventListener("click", function () {
     });
 });
 button64.addEventListener("click", function () {
+    removeAllChildNodes(divsContainer);
+
     for (var i = 0; i < 64; i++) {
         var div = document.createElement("div");
         div.id = "Div " + (i + 1);
@@ -96,6 +111,8 @@ button64.addEventListener("click", function () {
     });
 });
 button81.addEventListener("click", function () {
+    removeAllChildNodes(divsContainer);
+
     for (var i = 0; i < 81; i++) {
         var div = document.createElement("div");
         div.id = "Div " + (i + 1);
@@ -107,6 +124,8 @@ button81.addEventListener("click", function () {
     });
 });
 button100.addEventListener("click", function () {
+    removeAllChildNodes(divsContainer);
+
     for (var i = 0; i < 100; i++) {
         var div = document.createElement("div");
         div.id = "Div " + (i + 1);
