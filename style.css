@@ -1,11 +1,65 @@
-.gridBoxPiece {
-    background-color: orange;
-    width: 50px;
-    height: 50px;
-}
-
 #container {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
+    height: 600px;
+    width: 600px;
+    align-content: flex-start;
+}
+
+.gridBoxPiece16 {
+    background-color: orange;
+    border: 1px solid yellowgreen;
+    height: 148px;
+    /*Max width and height*/
+    width: 148px;
+}
+
+.gridBoxPiece25 {
+    background-color: orange;
+    border: 1px solid yellowgreen;
+    height: 118px;
+    /*Max width and height*/
+    width: 118px;
+}
+
+.gridBoxPiece36 {
+    background-color: orange;
+    border: 1px solid yellowgreen;
+    height: 98px;
+    /*Max width and height*/
+    width: 98px;
+}
+
+.gridBoxPiece49 {
+    background-color: orange;
+    border: 1px solid yellowgreen;
+    height: 83px;
+    /*Max width and height*/
+    width: 83px;
+}
+
+.gridBoxPiece64 {
+    background-color: orange;
+    border: 1px solid yellowgreen;
+    height: 73px;
+    /*Max width and height*/
+    width: 73px;
+}
+
+.gridBoxPiece81 {
+    background-color: orange;
+    border: 1px solid yellowgreen;
+    height: 64px;
+    /*Max width and height*/
+    width: 64px;
+}
+
+.gridBoxPiece100 {
+    background-color: orange;
+    border: 1px solid yellowgreen;
+    height: 58px;
+    /*Max width and height*/
+    width: 58px;
 }

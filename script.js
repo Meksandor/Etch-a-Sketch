@@ -55,7 +55,7 @@ button16.addEventListener("click", function () {
     }
     const gridBoxes = document.querySelectorAll('#container > div');
     gridBoxes.forEach((box) => {
-        box.setAttribute('class', `gridBoxPiece`);
+        box.setAttribute('class', `gridBoxPiece16`);
     });
 });
 button25.addEventListener("click", function () {
@@ -68,7 +68,7 @@ button25.addEventListener("click", function () {
     }
     const gridBoxes = document.querySelectorAll('#container > div');
     gridBoxes.forEach((box) => {
-        box.setAttribute('class', `gridBoxPiece`);
+        box.setAttribute('class', `gridBoxPiece25`);
     });
 });
 button36.addEventListener("click", function () {
@@ -81,7 +81,7 @@ button36.addEventListener("click", function () {
     }
     const gridBoxes = document.querySelectorAll('#container > div');
     gridBoxes.forEach((box) => {
-        box.setAttribute('class', `gridBoxPiece`);
+        box.setAttribute('class', `gridBoxPiece36`);
     });
 });
 button49.addEventListener("click", function () {
@@ -94,7 +94,7 @@ button49.addEventListener("click", function () {
     }
     const gridBoxes = document.querySelectorAll('#container > div');
     gridBoxes.forEach((box) => {
-        box.setAttribute('class', `gridBoxPiece`);
+        box.setAttribute('class', `gridBoxPiece49`);
     });
 });
 button64.addEventListener("click", function () {
@@ -107,7 +107,7 @@ button64.addEventListener("click", function () {
     }
     const gridBoxes = document.querySelectorAll('#container > div');
     gridBoxes.forEach((box) => {
-        box.setAttribute('class', `gridBoxPiece`);
+        box.setAttribute('class', `gridBoxPiece64`);
     });
 });
 button81.addEventListener("click", function () {
@@ -120,7 +120,7 @@ button81.addEventListener("click", function () {
     }
     const gridBoxes = document.querySelectorAll('#container > div');
     gridBoxes.forEach((box) => {
-        box.setAttribute('class', `gridBoxPiece`);
+        box.setAttribute('class', `gridBoxPiece81`);
     });
 });
 button100.addEventListener("click", function () {
@@ -133,7 +133,7 @@ button100.addEventListener("click", function () {
     }
     const gridBoxes = document.querySelectorAll('#container > div');
     gridBoxes.forEach((box) => {
-        box.setAttribute('class', `gridBoxPiece`);
+        box.setAttribute('class', `gridBoxPiece100`);
     });
 });
 
