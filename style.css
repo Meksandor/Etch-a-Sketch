@@ -31,8 +31,22 @@
     height: 50px;
 }
 
+#toggleAndHeading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
 
-/* Estilo iOS */
+#colorOption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* iOS Toggle Buton */
 .switch__container {
     margin: 30px auto;
     width: 120px;
