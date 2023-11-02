@@ -1,6 +1,8 @@
 // script.js
 const container = document.querySelector('#container');
+const containerDivSquares = document.querySelectorAll('.containerDivSquare');
 const slider = document.querySelector('#sliderBar');
+const clearButton = document.querySelector('#clearButton')
 
 function createGridAndPaint(rows, cols) {
     container.innerHTML = "";
@@ -28,3 +30,10 @@ slider.addEventListener("input", () => {
 });
 // Initial grid creation
 createGridAndPaint(14, 14);
+
+clearButton.addEventListener('click', function () {
+    const containerDivSquares = document.querySelectorAll('.containerDivSquare');
+    containerDivSquares.forEach(function (squareElement) {
+        squareElement.style.backgroundColor = "lightgray";
+    })
+});
