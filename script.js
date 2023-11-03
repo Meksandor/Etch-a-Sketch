@@ -4,6 +4,11 @@ const slider = document.querySelector('#sliderBar');
 const clearButton = document.querySelector('#clearButton')
 const toggleButton = document.querySelector("#switch-shadow");
 
+// Initial grid creation
+createGridAndPaint(14, 14);
+// At the beggining start painting wtih one color
+oneColorPainting();
+
 function hexColorGenerator() {
     let hexColor = `#${Math.random().toString(16).slice(2, 8).padEnd(6, 0)}`;
     return hexColor;
@@ -16,6 +21,25 @@ pickAcolor = document.querySelector('#pickAcolor')
 pickAcolor.style.color = hexColor;
 */
 
+function oneColorPainting() {
+    var containerDivSquares = document.querySelectorAll('.containerDivSquare');
+    containerDivSquares.forEach(function (squareElement) {
+        squareElement.addEventListener('mouseover', function () {
+            console.log('yehha')
+            squareElement.style.backgroundColor = "black";
+        });
+    });
+}
+function rainbowPainting() {
+    var containerDivSquares = document.querySelectorAll('.containerDivSquare');
+    containerDivSquares.forEach(function (squareElement) {
+        squareElement.addEventListener('mouseover', function () {
+            console.log('yehha')
+            squareElement.style.backgroundColor = hexColorGenerator();
+        });
+    });
+}
+
 function createGridAndPaint(rows, cols) {
     container.innerHTML = "";
     container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
@@ -27,22 +51,18 @@ function createGridAndPaint(rows, cols) {
         container.appendChild(square);
     }
 
-    var containerDivSquares = document.querySelectorAll('.containerDivSquare');
-    containerDivSquares.forEach(function (squareElement) {
-        squareElement.addEventListener('mouseover', function () {
-            console.log('yehha')
-            squareElement.style.backgroundColor = "orange";
-        });
-    });
+    if (toggleButton.checked) {
+        return rainbowPainting();
+    }
+    else {
+        return oneColorPainting();
+    }
 }
 
 slider.addEventListener("input", () => {
     const value = slider.value;
     createGridAndPaint(value, value);
 });
-
-// Initial grid creation
-createGridAndPaint(14, 14);
 
 clearButton.addEventListener('click', function () {
     const containerDivSquares = document.querySelectorAll('.containerDivSquare');
@@ -70,13 +90,7 @@ toggleButton.addEventListener("change", function () {
             });
         };
 
-        var containerDivSquares = document.querySelectorAll('.containerDivSquare');
-        containerDivSquares.forEach(function (squareElement) {
-            squareElement.addEventListener('mouseover', function () {
-                console.log('yehha')
-                squareElement.style.backgroundColor = hexColorGenerator();
-            });
-        });
+        rainbowPainting();
     }
     else {
         body.style.backgroundImage = 'none';
@@ -84,6 +98,7 @@ toggleButton.addEventListener("change", function () {
         optionTexts.forEach(function (text) {
             text.style.color = 'black'
         });
+        oneColorPainting();
     }
 });
 
