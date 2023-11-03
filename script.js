@@ -4,6 +4,18 @@ const slider = document.querySelector('#sliderBar');
 const clearButton = document.querySelector('#clearButton')
 const toggleButton = document.querySelector("#switch-shadow");
 
+function hexColorGenerator() {
+    let hexColor = `#${Math.random().toString(16).slice(2, 8).padEnd(6, 0)}`;
+    return hexColor;
+}
+/* To Test hexColor
+hexColorGenerator();
+console.log("🚀 ~ file: test.js:5 ~ hexColor", hexColor);
+
+pickAcolor = document.querySelector('#pickAcolor')
+pickAcolor.style.color = hexColor;
+*/
+
 function createGridAndPaint(rows, cols) {
     container.innerHTML = "";
     container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
@@ -58,9 +70,13 @@ toggleButton.addEventListener("change", function () {
             });
         };
 
-        function rainbowHoverContainerSquares() {
-
-        }
+        var containerDivSquares = document.querySelectorAll('.containerDivSquare');
+        containerDivSquares.forEach(function (squareElement) {
+            squareElement.addEventListener('mouseover', function () {
+                console.log('yehha')
+                squareElement.style.backgroundColor = hexColorGenerator();
+            });
+        });
     }
     else {
         body.style.backgroundImage = 'none';
