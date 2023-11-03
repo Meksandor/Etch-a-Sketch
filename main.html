@@ -8,23 +8,31 @@
 <body>
     <div id="containerAndSlider">
 
-        <div id="slideAndOptions">
+        <div id="Options">
 
             <div id="colorOption">
-                <h3 class="optionText" id="pickAcolor">Pick a Color</h3>
+                <h3 class="optionText" id="pickAcolor"> 👇 Pick a Color 👇 </h3>
+                <input id="colorPicker" type="color" value="#333333">
+
             </div>
 
             <button id="clearButton">Clear All</button>
 
-            <div id="toggleAndHeading">
-                <h2 class="optionText">Rainbow Mode (Asriel Dremurr)</h2>
-                <div class="switch__container">
-                    <input id="switch-shadow" class="switch switch--shadow" type="checkbox">
-                    <label for="switch-shadow"></label>
+            <div id="charcoalAndRainbow">
+                <button id="charcoalPencil"> Charcoal Pencil</button>
+
+                <div id="toggleAndHeading">
+                    <h2 class="optionText">Rainbow Mode (Asriel Dremurr)</h2>
+                    <div class="switch__container">
+                        <input id="switch-shadow" class="switch switch--shadow" type="checkbox">
+                        <label for="switch-shadow"></label>
+                    </div>
                 </div>
             </div>
-
-            <input type="range" min="1" max="100" value="50" class="slider" id="sliderBar">
+            <div id="ratioOption">
+                <h2 id="ratioHeading"></h2>
+                <input type="range" min="1" max="100" value="50" class="slider" id="sliderBar">
+            </div>
         </div>
 
         <div id="container">

@@ -3,6 +3,9 @@ const containerDivSquares = document.querySelectorAll('.containerDivSquare');
 const slider = document.querySelector('#sliderBar');
 const clearButton = document.querySelector('#clearButton')
 const toggleButton = document.querySelector("#switch-shadow");
+const ratioHeading = document.querySelector('#ratioHeading')
+
+ratioHeading.textContent = ' ';
 
 // Initial grid creation
 createGridAndPaint(14, 14);
@@ -26,7 +29,7 @@ function oneColorPainting() {
     containerDivSquares.forEach(function (squareElement) {
         squareElement.addEventListener('mouseover', function () {
             console.log('yehha')
-            squareElement.style.backgroundColor = "black";
+            squareElement.style.backgroundColor = selectedColorByColorPicker();
         });
     });
 }
@@ -62,6 +65,10 @@ function createGridAndPaint(rows, cols) {
 slider.addEventListener("input", () => {
     const value = slider.value;
     createGridAndPaint(value, value);
+});
+slider.addEventListener("input", () => {
+    const sliderValue = slider.value;
+    ratioHeading.textContent = ` ${sliderValue} X ${sliderValue} Grid Ratio`
 });
 
 clearButton.addEventListener('click', function () {
@@ -102,3 +109,16 @@ toggleButton.addEventListener("change", function () {
     }
 });
 
+const colorBox = document.getElementById("color-box");
+const colorPicker = document.getElementById("color-picker");
+
+function selectedColorByColorPicker() {
+
+    const colorPicker = document.getElementById("color-picker");
+    const colorCode = document.getElementById("color-code");
+
+    colorPicker.addEventListener("input", () => {
+        const selectedColor = colorPicker.value;
+        return selectedColor;
+    });
+}
