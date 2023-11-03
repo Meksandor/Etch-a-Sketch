@@ -42,7 +42,7 @@ clearButton.addEventListener('click', function () {
 toggleButton.addEventListener("change", function () {
     var body = document.body;
     var backgroundImageGif = new Image();
-    backgroundImageGif.src = 'media/undertale.gif';
+    backgroundImageGif.src = 'media/rainbow.gif';
 
     var optionTexts = document.querySelectorAll('.optionText')
 
@@ -51,15 +51,11 @@ toggleButton.addEventListener("change", function () {
             // Set the background image using the style property
             body.style.backgroundImage = 'url(' + backgroundImageGif.src + ')';
             body.style.backgroundSize = 'cover'; // You can adjust this property as needed
+            body.style.backgroundPosition = 'center';
 
             optionTexts.forEach(function (text) {
                 text.style.color = 'white'
             });
-
-            // Optionally, set other background properties like background repeat, position, etc.
-            // body.style.backgroundRepeat = 'no-repeat';
-            // body.style.backgroundPosition = 'center';
-            // BackgroundPosition to center, etc. as needed
         };
 
         function rainbowHoverContainerSquares() {
